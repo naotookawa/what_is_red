@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import time
 
-image = cv2.imread('red.jpg')
+image = cv2.imread('tokyo.jpg')
 
 def red_hsv(image):
     hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
@@ -36,7 +36,7 @@ if __name__ == '__main__':
         cv2.imshow('Original Image', image)
         cv2.imshow('Red Extracted Image', result)
 
-        if (cv2.waitKey(100) & 0xFF == ord('q')) | (time.time() - start_time > 3):
+        if (cv2.waitKey(100) & 0xFF == ord('q')) | (time.time() - start_time > 10):
             break
         
 
